@@ -1,0 +1,163 @@
+@font-face {
+	font-family:'digital-font';
+	src: url('Fonts/digital-7.ttf');
+}
+
+body {
+	background: #C5E2E1;
+}
+
+i {
+	padding: 15px;
+	color: #1F6CCC;
+}
+
+input {
+	width: 50px;
+}
+
+ul {
+	display: inline-block;
+	list-style-type: none;
+	background: #E0E0E0;
+	margin: 0;
+	padding: 10px 3px;
+	outline: 5px inset white;
+}
+
+li {
+	display: inline;
+}
+
+#error_msg {
+	position: relative;
+	top: 15px;
+	color: red;
+	font-size: 30px;
+}
+
+#game_container {
+	display: inline-block;
+	position:  relative;
+	margin-left:auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	padding: 15px;
+	width: fit-content;
+	height: fit-content; /*fit-content*/
+	user-select: none;
+	padding: 15px 5px;
+	background: #E0E0E0;
+	outline: 5px outset white;
+	user-select: none;
+}
+
+#mines_table {
+	background: lightgrey;
+	position:  relative;
+	margin-left:auto;
+	margin-right: auto;
+	top: 10px;
+	margin: 10px;
+	outline: 4px inset white;
+}
+
+#emoticon {
+	position: relative;
+	top: 2px;
+	margin: -3px 0px;
+	filter: drop-shadow(2px 2px 2px grey);
+}
+
+.align_center {
+	text-align: center;
+}
+
+.bgr_black {
+	position: relative;
+	line-height: 28px;
+	margin: -5px 2px;
+	min-width: 80px;
+	padding: 5px;
+	font-family: 'digital-font', sans-serif;
+	font-size: 45px;
+	color: red;
+	background: black;
+}
+
+.row {
+	display: grid;
+	/*grid-template-columns: repeat(32, auto); 
+	 // included in createGameTable(), script.js */
+	width: fit-content;
+	height: 25px;
+	padding: 4px;
+}
+
+.cell {
+	position: relative;
+	display: inline;
+	width: 25px;
+	height: 25px;
+	line-height: 24px;
+	background: #E0E0E0;
+	outline: 4px outset white;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+.animated_winner_message {
+	color: green;
+	animation:  you_won 4s infinite;
+}
+
+@keyframes you_won {
+	0% {color: #C2F5FC;}
+	15% {color:  green;}
+	20% {color:  #C2F5FC;}
+	25% {color:  green;}
+	30% {color:  #C2F5FC;}
+	40% {color:  green;}
+	80% {color:  #C2F5FC;}
+	100% {color:  green;}
+}
+
+.glow_btn {
+	background: #1D87AB;
+	box-shadow: 3px 3px 10px 1px #2594BA;
+	border-radius: 5px;
+	color: #FFF;
+	border: none;
+	height: 30px;
+	margin-left: 20px;
+}
+
+.glow_btn:hover {
+	cursor: pointer;
+	background: #176A87;
+}
+
+.glow_btn:active {
+	background: #235BD6;
+}
+
+#emoticon:hover {
+	cursor: pointer;
+	filter: hue-rotate(-30deg);
+}
+
+#emoticon:active {
+	filter: hue-rotate(75deg);
+}
+
+.cell:hover {
+	background: #CCC;
+}
+
+.cell:active {
+	background: #E0E0E0;
+	outline: none
+}

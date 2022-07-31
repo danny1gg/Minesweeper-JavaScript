@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<link rel = "stylesheet" type = "text/css" href = "css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		<title>Minesweeper</title>
+	</head>
+	<body>
+		<div class = "align_center">
+			<h1>Minesweeper</h1>
+			<div id = "settings">
+				(Rows) x (Colls): <input	id = "game_width" type = "number" value = "15" min = "7"; max = "30" onInput = "resetErrorMsg();">
+				Mines: <input	id = "game_mines" type = "number" value = "15" min = "1" max = "900" onInput = "resetErrorMsg();">
+				<button class = "glow_btn" onclick = "updateGameSpecs()">Load values</button>
+			</div>
+			<h2 id = "error_msg" style = "visibility: hidden"></h2>
+			<br>
+			<br>
+			<div id = "game_container" class = "align_center">
+				<ul id = "clock_bar">
+					<li id = "display_nr_mines" class = "bgr_black" style = "float: left;"></li>
+					<li class = "align_center">
+						<a href = "index.html">
+							<img id = "emoticon" src="css/emoticons/happy.png" width="30px" height="30px">
+						</a>
+					</li>
+					<li id = "timer_clock" class = "bgr_black" style = "float: right;">0</li>
+				</ul>
+				<div id = "mines_table" style = "padding: 4px;"></div>
+			</div>	
+		</div>
+		<script type = "text/javascript" src="JS/script.js"></script>
+	</body>
+</html>
