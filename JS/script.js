@@ -1,6 +1,6 @@
 let minesTable = getById("mines_table");
-let	clockBar = getById("clock_bar");
-let	emoticon = getById("emoticon");
+let clockBar = getById("clock_bar");
+let emoticon = getById("emoticon");
 let timer = getById("timer_clock");
 let inputRowsCols = getById("game_width").value;
 let inputMines = getById("game_mines").value;
@@ -163,7 +163,7 @@ function createAndPlaceMines() {
 	}
 }
 
-// ======== Cells functions=========
+// ======== Cells functions =========
 function clickCell() {
 	let clickedLocation = event.srcElement.id;
 	if (!flagedCells.includes(clickedLocation) && clickedLocation != "" && status === "playing") {
