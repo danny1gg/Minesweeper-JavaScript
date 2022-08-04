@@ -35,16 +35,13 @@ function resetErrorMsg() {
 }
 
 function checkStatus() { // ========= check game status
-	switch (status) {
-		case "lost":
-			emoticon.setAttribute('src', 'css/emoticons/sad.png');
-			break;
-		case "won": 
-			emoticon.setAttribute('src', 'css/emoticons/cool.png');
-			break;
-		default:
-			emoticon.setAttribute('src', 'css/emoticons/happy.png');
-	}
+	if (status === "lost") {
+		emoticon.setAttribute('src', 'css/emoticons/sad.png');
+	} else if (status === "won") {
+		emoticon.setAttribute('src', 'css/emoticons/cool.png');
+	} else {
+		emoticon.setAttribute('src', 'css/emoticons/happy.png');
+	}		
 }
 
 function updateGameSpecs() {
